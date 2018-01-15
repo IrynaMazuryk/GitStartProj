@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6l5-5F-Be2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fwr-q5-HcX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -269,6 +269,55 @@
             </objects>
             <point key="canvasLocation" x="1503" y="-333"/>
         </scene>
+        <!--Start Logo View Controller-->
+        <scene sceneID="31S-Qk-nid">
+            <objects>
+                <viewController id="fwr-q5-HcX" customClass="StartLogoViewController" customModule="JSON2_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CP1-uH-eVF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Gg9-h6-Vli">
+                                <rect key="frame" x="-62.5" y="93.5" width="500" height="500"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4e-qO-EdN">
+                                <rect key="frame" x="47" y="591" width="280" height="56"/>
+                                <color key="backgroundColor" red="0.64868812340000004" green="0.92474240060000001" blue="0.74445861540000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Pvh-wc-Qhw"/>
+                                    <constraint firstAttribute="height" constant="56" id="mot-KH-AuI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6l5-5F-Be2" kind="show" id="HNp-Cw-vHb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70989837384393806" green="1" blue="0.95581859729104379" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="K4e-qO-EdN" firstAttribute="top" secondItem="Gg9-h6-Vli" secondAttribute="bottom" constant="-2.5" id="5Kq-L0-VxI"/>
+                            <constraint firstItem="Gg9-h6-Vli" firstAttribute="top" secondItem="wJz-nK-dzZ" secondAttribute="top" priority="250" constant="188" id="7kQ-eu-X2X"/>
+                            <constraint firstItem="K4e-qO-EdN" firstAttribute="leading" secondItem="CP1-uH-eVF" secondAttribute="leading" constant="47" id="8Xo-IH-3RY"/>
+                            <constraint firstItem="Gg9-h6-Vli" firstAttribute="leading" secondItem="wJz-nK-dzZ" secondAttribute="leading" priority="250" constant="68" id="C3i-rP-efA"/>
+                            <constraint firstItem="wJz-nK-dzZ" firstAttribute="trailing" secondItem="K4e-qO-EdN" secondAttribute="trailing" constant="48" id="DFY-pH-j2q"/>
+                            <constraint firstItem="Gg9-h6-Vli" firstAttribute="centerX" secondItem="wJz-nK-dzZ" secondAttribute="centerX" id="Fpn-wK-uEx"/>
+                            <constraint firstItem="wJz-nK-dzZ" firstAttribute="bottom" secondItem="K4e-qO-EdN" secondAttribute="bottom" constant="20" id="Hjs-Fo-3k5"/>
+                            <constraint firstItem="wJz-nK-dzZ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="K4e-qO-EdN" secondAttribute="trailing" id="f9B-YI-U1p"/>
+                            <constraint firstItem="Gg9-h6-Vli" firstAttribute="centerY" secondItem="wJz-nK-dzZ" secondAttribute="centerY" id="md2-ii-i2e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wJz-nK-dzZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="LogoView" destination="Gg9-h6-Vli" id="5CC-hi-4Qz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Yp-lq-rh3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="-347.67616191904051"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="RAF-x3-vR2">
             <objects>
@@ -289,6 +338,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="greenLogo" width="500" height="500"/>
         <image name="who_man" width="93" height="135"/>
     </resources>
 </document>
